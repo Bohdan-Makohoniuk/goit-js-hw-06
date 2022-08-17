@@ -1,12 +1,25 @@
-// 1. Знайти в document елементи з класом item та повернути довжину масиву
+// Визначає кількість категорій
+
 const ItemsEl = document.querySelectorAll('.item');
-console.log(ItemsEl);
 const liItemEl = ItemsEl.length
 console.log(` Number of categories:${liItemEl}`);
 
-// 2.Створити метод який перебире li class="item" та повертає назву h2
-// 2.Створити метод який перебире li class="item" та повертає кількість li 
-const categoriesEl = document.querySelectorAll('#categories');
-console.log(...categoriesEl);
+// Додає заголовки h2
+
+const valuesEl = document.querySelectorAll('h2');
+valuesEl.forEach(function (value) {
+    console.log(`categories: ${value.textContent}`);
+});
+
+// Рахує кількість li в одні категорії
+const list = document.querySelectorAll('#categories');
+const listEl = document.querySelectorAll('ul');
+listEl.forEach(function (value) {
+    console.log(`Elements: ${value.length}`);
+});
+console.log(listEl);
 
 
+
+
+ 
