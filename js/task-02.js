@@ -5,14 +5,17 @@ const ingredients = [
   'Tomatos',
   'Herbs',
   'Condiments',
+  'test',
 ];
-const list = document.createElement('li');
-list.classList.add(name);
-list.textContent = 'Potatoes';
-document.body.appendChild(list);
-console.log(list);
 
 
-// ingredients.forEach(function (ingredient) {
-//     console.log(`categories: ${value.textContent}`);
-// });
+const ingredientsEl = document.querySelector('#ingredients');
+const elements = ingredients.map(ingredient => {
+  const element = document.createElement('li');
+  element.classList.add('item');
+  element.textContent = ingredient;
+  return element
+});
+ingredientsEl.append(...elements);
+console.log(ingredientsEl);
+console.log(elements);
