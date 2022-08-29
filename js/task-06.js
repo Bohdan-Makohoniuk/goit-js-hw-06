@@ -3,6 +3,7 @@
 const input = document.querySelector('#validation-input');
 input.addEventListener('blur', onBlur);
 function onBlur(event) {
+    // подія що відслідковує по елементно стрічку вводу
     const input = event.currentTarget;
     const inputLength = Number(input.dataset.length);
     if(input.value.length === inputLength){
@@ -14,7 +15,6 @@ function onBlur(event) {
         input.classList.remove('valid');
         input.classList.add('invalid');
     }
-    console.log(inputLength);
-    console.log(input);
+   
 }
 
